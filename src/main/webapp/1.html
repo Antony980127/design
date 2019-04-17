@@ -1,0 +1,234 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0052)WeiBo/system/jsp/index.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="WeiBo/">--><base href=".">
+
+<title>我的首页 微博-随时随地发现新鲜事</title>
+
+<link rel="stylesheet" href="web_files/font-awesome.min.css">
+<link rel="stylesheet" href="web_files/index.css">
+<link rel="stylesheet" type="image/vnd.microsoft.icon" href="web_files/favicon (1).ico">
+	
+	
+<script src="web_files/jquery-1.7.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="web_files/zhuye.js" type="text/javascript" charset="utf-8"></script>
+<script src="web_files/index.js" type="text/javascript">
+	</script>
+
+
+<script type="text/javascript">
+	function selectimg(){
+		$("#file").trigger("click");
+		
+		
+	}
+
+	function checkUser(path) {
+		var account = 'null';
+		if (account == null || account == undefined || account == '' || account == "null") {
+			alert("请先登录！");
+			window.location.href =path + "/system/jsp/login.jsp";
+			return;
+		} else {
+			var content = $("#content").val();
+			if (content == null || content == undefined || content == '') {
+				alert("发布内容为空！");
+				return;
+			} else {
+				$("#fabuForm").submit();
+			}
+		}
+	}
+
+	function sendComment(path, newsID) {
+		//评论的用户
+		var account = 'null';
+		if (account == null || account == undefined || account == '' || account == "null") {
+			alert("请先登录！");
+			window.location.href = path + "/system/jsp/login.jsp";
+			return;
+		} else {
+
+			var name = "#comment" + newsID;
+			var comment = $(name).val(); //评论的内容
+			if (comment == null || comment == undefined || comment == '') {
+				alert("评论内容为空！");
+				return;
+			} else {
+				indexJS.sendCommentContent(path, comment, account, newsID);
+			}
+		}
+	}
+
+	function addCollection(path, newsID) {
+		//评论的用户
+		var account = 'null';
+		if (account == null || account == undefined || account == '' || account == "null") {
+			alert("请先登录！");
+			window.location.href = path + "system/jsp/login.jsp";
+			return;
+		} else {
+			indexJS.collection(path, newsID, account);
+		}
+	}
+
+	//图片预览功能
+	function PreviewImage(imgFile) {
+		var filextension = imgFile.value.substring(imgFile.value.lastIndexOf("."), imgFile.value.length);
+		filextension = filextension.toLowerCase();
+		if ((filextension != '.jpg') && (filextension != '.gif') && (filextension != '.jpeg') && (filextension != '.png') && (filextension != '.bmp')) {
+			alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+			imgFile.focus();
+		} else {
+			var path;
+			if (document.all) {
+				imgFile.select();
+				path = document.selection.createRange().text;
+				document.getElementById("imgPreview").innerHTML = "";
+				document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")"; //使用滤镜效果      
+			} else {
+				path = window.URL.createObjectURL(imgFile.files[0]);
+				document.getElementById("imgPreview").innerHTML = "<img id='img1' width='180px' height='200px' src='" + path + "'/>";
+			}
+			var img = document.getElementById("imgPreview");
+			img.style.display = 'block';
+			imgFile.disabled=false;
+		}
+	}
+</script>
+</head>
+
+<body style="overflow-x:hidden">
+	<header>
+
+
+
+
+
+<!--<base href="WeiBo/">--><base href=".">
+
+
+
+<link rel="stylesheet" href="web_files/header.css">
+<link rel="stylesheet" href="web_files/font-awesome.min.css">
+<script src="web_files/loginOut.js" type="text/javascript" charset="utf-8"></script>
+
+
+	<!--中间内容-->
+	<div class="indexBox">
+			<!--左侧导航固定-->
+			<!--中间内容-->
+			<div class="indexContBox">
+				<div>
+					
+						
+							<div class="indexLists">
+								<div class="indexList">
+
+									<div class="indexItem">
+										<div class="touxiang" onclick="indexJS.newsDetail(&#39;/WeiBo&#39;,62)">
+											<img src="web_files/tx1.jpg">
+										</div>
+										<div class="indexHover">
+											<ul>
+												<li><a href="WeiBo/#">帮助上头条</a></li>
+												<li><a href="WeiBo/#">屏蔽这条微博</a></li>
+												<li><a href="WeiBo/#">屏蔽 美妆小丫丫</a></li>
+												<li><a href="WeiBo/#">取消关注美妆小丫丫</a></li>
+												<li><a href="WeiBo/delete?newID=62">删除</a></li>
+											</ul>
+										</div>
+										<h5>
+											1234 <span class="V"></span> <span class="top1"></span><img class="right" src="web_files/箭头.png">
+										</h5>
+										<p class="fabutime" onclick="indexJS.newsDetail('')">
+											<a>2018-06-22 09:16:03</a> 来自 <a href="WeiBo/#">手机微博触屏版</a>
+										</p>
+										<div class="fabuContent">
+											<p>什么事？</p>
+
+										</div>
+										<div class="indexImg" onclick="indexJS.newsDetail('')">
+											
+										</div>
+									</div>
+								</div>
+								<div class="listFooter">
+									<ul>
+										<li><span><img id="collection62" onclick="addCollection('')" src="web_files/收 藏 (1).png"> 收藏</span></li>
+										<li><span><img src="web_files/分享.png"> 17</span></li>
+										<li class="liuyan"><span><img src="web_files/留言.png"> 34</span></li>
+										<li><span> <img id="fabulous62" src="web_files/点赞 (1).png" onclick="indexJS.fabulous('')">
+												<text id="fabulousNum62">1</text>
+										</span></li>
+									</ul>
+									<div class="pinglun">
+										<div class="pltilte">
+											<span class="jt"></span><span>#微博辟谣#平台，</span><a href="WeiBo/#">欢迎查阅！</a>
+										</div>
+										<div class="pltouxiang">
+											<div class="left">
+												<img src="web_files/default_avatar_female_50.gif">
+											</div>
+											<div class="plcontent right">
+												<div>
+													<input type="text" name="comment62" id="comment62" value="">
+												</div>
+											</div>
+										</div>
+										<div class="plcheck right">
+											<div class="left">
+												<img src="web_files/笑脸.png"> <img src="web_files/图片.png">
+											</div>
+											<div class="left">
+												<ul>
+													<li><input type="checkbox"> <span>同时转发到我的微博</span></li>
+													<li><input type="checkbox"> <span>同时评论给原文作者
+															幽默搞笑女神经</span></li>
+
+												</ul>
+											</div>
+											<div class="right sub">
+												<input type="button" value="评论" onclick="('<%=basePath%>',60)">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--评论-->
+							</div>
+						
+						
+						
+						
+						
+						
+						
+							
+							
+						
+								
+							
+</div>
+							<!-- 索引页  如果当前页==索引页  索引页不可用 
+								简单的二级分页：
+								 如果总页数特别多，例如200多页。
+								 例如：如果当前页是第1页   （1）【2】【3】
+								 如果当前页是第2页          【1】（2）【3】【4】
+								 如果当前页是第3页           【1】【2】（3）【4】【5】
+								 如果当前页是第4页            【2】【3】（4）【5】【6】
+								 如果当前页是第198页            【196】【197】（198）【199】【200】
+								 如果当前页是第200页             【198】【199】（200）
+							-->
+
+
+  
+  
+  
+	
+
+
+
+
+
+</body></html>

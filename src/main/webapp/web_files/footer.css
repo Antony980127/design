@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+	color: #808080;
+}
+
+#footer{
+	width: 100%;
+	height: auto;
+	border-top:1px solid #e5e5e5;
+	z-index: 99;
+}
+.footerTop{
+	width: 840px;
+    margin: 0 auto;
+    padding: 20px 0 10px 80px;
+
+}
+
+.footerTop dl dt{
+	font-size: 16px;
+    padding: 0 0 15px;
+    white-space: nowrap;
+    width: 138px;
+    overflow: hidden;
+}
+
+.footerTop .topList{
+	float: left;
+    display: inline;
+    margin: 0 50px 0 0;
+}
+.footerTop .topList a{
+	display: inline-block;
+    margin: 0 0px 5px 0;
+    width: 48px;
+    overflow: hidden;
+}
+.footerTop .topList .cord {
+    width: 120px;
+    overflow: hidden;
+    margin-right: 0px;
+}
+.footerTop .topList dd{
+	white-space: nowrap;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+    
+.footerBottom {
+	width: 100%;
+	background:#f2f2f5;
+	padding: 15px 0;
+}
+.footerBottom p{
+	text-align: center;
+	width: 100%;
+	font-size: 12px;
+	color: #808080;
+	line-height: 14px;
+	padding-top: 10px;
+}
+.footerBottom p a{
+	margin-right: 20px;
+}
+.footerBottom .margin{
+	padding-right: 20px;
+}
+.footerBottom .copy2{
+	font-size: 14px;
+}
+b{
+	background: url(../img/icon.png);
+}
+.footerBottom .weibo{
+	display: inline-block;
+	background-position: -50px -300px;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-top;
+    margin-right: 3px;
+}
+.footerBottom .badge{
+	display: inline-block;
+    background-repeat: no-repeat;
+    background-position: -100px -300px;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-top;
+    margin-right: 3px;
+    margin-top: -3px;
+}

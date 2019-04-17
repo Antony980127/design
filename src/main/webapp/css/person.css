@@ -1,0 +1,56 @@
+
+body{
+	width: 100%;height: 100%;padding: 0;margin: 0;
+	background: rgb(229,236,242);
+	
+}
+ul li {
+	list-style: none
+}
+/*头部*/
+.nav_container{
+	background: url(../img/bj1.jpg);
+	opacity: 0.8;
+	
+}
+.nav_text{
+	
+	margin: auto;
+	width: 100%;
+	text-align: center;
+			
+	font-size: 16px;
+	
+	
+}
+.headImg{
+	width: 70px;
+	height: 70px;
+	border: 1px solid #337AB7;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+	
+}
+.user_name{
+	float: left;
+	margin-left: 2%;
+	margin-top: 10px;
+}
+.head_nav{
+	min-height: 400px;
+	margin-top: 10px;
+}
+.center_nav{
+	border-bottom: 2px lightblue solid;
+	float: left;
+	width: 100%;
+}
+.center_nav ul li{
+	float: left;
+	margin-left: 2%;
+	margin-bottom: -1px;
+}
+.nav_active{
+	border-bottom: 3px solid burlywood;
+}

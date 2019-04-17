@@ -1,0 +1,244 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999 !important;
+	width: 100%;
+	height: 48px;
+	border-top: 2px solid #fa7d3c;
+	box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3), 0 0 6px 2px rgba(0, 0, 0, 0.15);
+	background: rgba(255, 255, 255, 0.94);
+}
+
+header .navBox {
+	position: relative;
+	width: 1000px;
+	height: 48px;
+	margin: 0 auto;
+	z-index: 99999999;
+}
+
+header .navBox .logoBox {
+	position: relative;
+	float: left;
+	left: auto;
+	top: auto;
+	margin: 0;
+	background: none;
+}
+
+header .navBox .logo {
+	width: 190px;
+	height: 48px;
+	cursor: pointer;
+}
+
+header .navBox .logoBox span {
+	display: block;
+	/*margin-left: 50px;*/
+	width: 140px;
+	height: 48px;
+	cursor: pointer;
+	background: url(../img/WB_logo.png) no-repeat 0 40%;
+}
+
+.searchBox {
+	position: relative;
+	float: left;
+	width: 288px;
+	height: 28px;
+	margin: 9px 0 0 10px;
+	background-color: #f2f2f5;
+	border: 1px solid #ccc;
+}
+
+.searchBox input {
+	position: absolute;
+	font-size: 12px;
+	top: 0;
+	left: 0;
+	width: 245px;
+	padding: 4px 33px 4px 10px;
+	height: 20px;
+	line-height: 20px;
+	box-shadow: none;
+	border: none;
+	background-color: transparent;
+	color: #808080;
+	outline-style: none;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.search {
+	position: absolute;
+	top: 4px;
+	right: 10px;
+	color: #6A6F79;
+	font-size: 18px;
+}
+
+.navRight {
+	float: right;
+	margin-left: -11px;
+}
+
+.navRight a {
+	color: #6D717B;
+}
+
+.navLists {
+	margin-right: 18px;
+	float: left;
+	margin: 11px 20px 11px 0;
+}
+
+.navLists li {
+	margin-left: 18px;
+	float: left;
+	display: inline;
+	position: relative;
+	max-width: 139px\0;
+	/*margin-left: 30px;*/
+	font-size: 14px;
+	line-height: 26px;
+	white-space: nowrap;
+	color: #6D717B;
+	cursor: pointer;
+}
+.navLists li:hover{
+	color:#eb7350;
+}
+.navLists li:hover i{
+	color:#eb7350;
+}
+.navRight  i {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #6D717B;
+}
+
+.navLogin {
+	float: left;
+	margin: 11px 0 10px 0;
+}
+
+.navLogin li {
+	float: left;
+	display: inline;
+	position: relative;
+	line-height: 26px;
+	margin: 0 15px;
+	white-space: nowrap;
+}
+.navLogin li a:hover{
+	color:#eb7350;
+}
+.navLogin .line {
+	border-left-width: 1px;
+	border-left-style: solid;
+	width: 0;
+	overflow: hidden;
+	margin: 6px 0px 0 0;
+	height: 14px;
+}
+
+/*判断一下是否是登录页 或者是 首页  隐藏 显示 */
+.wbBlock{
+	display: block !important;
+}
+.wbNone{
+	display: none !important;
+}
+/*首页的最右侧*/
+.navSet{
+	float: left;
+    margin: 12px 0 12px 0;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-color: #d9d9d9;
+    margin-right: 10px;
+}
+.setList{
+    float: left;
+    display: inline;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 0 0 21px;	
+}
+.setList .num{
+	position: absolute;
+    right: -10px;
+    top: -3px;
+    border: 1px solid #fff;
+	min-width: 18px;
+    height: 13px;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 2px;
+    background: #fa7d3c;
+    color: #fff;
+    border-radius: 3px;
+}
+.edit{
+	background: #FA7936;
+}
+.edit i{
+	color:white;
+	padding:3px;
+	width: 20px;
+	
+}
+
+
+
+
+@media only screen and (max-width: 1006px) {
+	header .navBox {
+		width: 760px;
+	}
+	.searchBox {
+		width: 158px;
+	}
+	.searchBox input {
+		width: 115px;
+	}
+	.navLists li:last-child{
+		display: none !important;
+	}
+}
+
+@media only screen and (min-width: 1006px) and (max-width: 1295px) {
+	.searchBox {
+		width: 218px;
+	}
+	.searchBox input {
+		width: 175px;
+	}
+}
+
+@media only screen and (min-width: 1295px) {
+	header .navBox {
+		width: 1200px;
+	}
+	.searchBox {
+		width: 468px;
+	}
+	.searchBox input {
+		width: 425px;
+	}
+}
