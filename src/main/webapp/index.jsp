@@ -7,21 +7,29 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
-
-    <link rel="stylesheet" href="css/index.css"  type="text/css" />
-    <script type="text/javascript" src="js/jquery-2.2.3.js" ></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
+<style type="text/css">
+    html,body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+</style>
+
 <body>
 <div class="col-md-12 column">
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">首页</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="#">首页</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -30,13 +38,18 @@
                     <a href="#">个人中心</a>
                 </li>
                 <li>
-                    <a href="#">流沙岁月社区</a>
+                    <a href="photounity.jsp">流沙岁月社区</a>
                 </li>
-                <li class="dropdown" onclick="change5()" id="timeId">
-                    <a href="#" >时光胶囊社区</a>
+                <li>
+                    <a href="community.jsp">时光胶囊社区</a>
+                </li>
+                <li>
+                    <a href="history.jsp">历史长河</a>
+                </li>
+                <li>
+                    <a href="#">热门推荐</a>
+                </li>
 
-                </li>
-                <li><a href="#">热门推荐</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -49,7 +62,7 @@
     </nav>
 </div>
 
-<div class="row clearfix" >
+<div class="row clearfix">
     <div class="col-md-12 column">
         <div class="row clearfix">
             <div class="col-md-2 column" id="list_nav" style="opacity: 0.7	;">
@@ -61,7 +74,8 @@
                 </ul>
             </div>
             <div class="col-md-10 column" style="height: 600px;">
-                <iframe id="iFrame" style="float: left;" frameborder="0" src="person.jsp" name="iframe_a"  width="100%" height="100%">
+                <iframe id="iFrame" style="float: left;" frameborder="0" src="photos.jsp" name="iframe_a"
+                        width="100%" height="100%">
                 </iframe>
             </div>
         </div>
@@ -70,9 +84,7 @@
 
 </body>
 <script>
-
-
-    $(".li_list").click(function(){
+    $(".li_list").click(function() {
 
         $(this).toggleClass("nav_active");
 
@@ -80,20 +92,23 @@
 
     })
 
-    function change3(){
-        document.getElementById("iFrame").src="time.jsp";
+    function change3() {
+        document.getElementById("iFrame").src = "time.jsp";
     }
 
-    function change2(){
-        document.getElementById("iFrame").src="photos.jsp";
+    function change2() {
+        document.getElementById("iFrame").src = "photos.jsp";
 
     }
-    function change4(){
-        document.getElementById("iFrame").src="person.jsp";
-    }
-    function change5(){
 
-        document.getElementById("iFrame").src="community.jsp";
+    function change4() {
+        document.getElementById("iFrame").src = "person.jsp";
+    }
+
+    function change5() {
+
+        document.getElementById("iFrame").src = "community.jsp";
     }
 </script>
+
 </html>

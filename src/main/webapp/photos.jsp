@@ -1,11 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/4/8 0008
-  Time: 15:30
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html>
 
@@ -14,8 +14,8 @@
     <title></title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/photos.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/photos.css" />
 
 </head>
 <script type="text/javascript">
@@ -34,7 +34,6 @@
         <div class="nav_text">
             <h3 style="color: red;">欢迎来到</h3>
             <h2 style="color: black">你的时光秀</h2>
-
         </div>
     </div>
 
@@ -77,16 +76,35 @@
                         <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
                         <div class="caption">
                             我的大学
-
+                            <text id="delete"  style="float: right;">删除</text>
+                            <a id="updateAlbum" style="float: right;">更新</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/city/default.jpg" />
+                        <div class="caption">
+                            我的大学
                             <text id="delete"  style="float: right;">删除</text>
 
                             <a id="updateAlbum" style="float: right;">更新</a>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
+                        <div class="caption">
+                            我的大学
+                            <text id="delete"  style="float: right;">删除</text>
+
+                            <a id="updateAlbum" style="float: right;">更新</a>
 
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-3">
                     <div class="thumbnail">
                         <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
@@ -101,24 +119,14 @@
                 <!--表单-->
                 <form style="margin: 0 auto;width: 400px;">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <label for="albumName">相册名称</label>
+                        <input type="text" class="form-control" id="albumName" placeholder="请输入相册名称">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="albumDesc">相册描述</label>
+                        <input type="text" class="form-control" id="albumDesc" placeholder="请输入相册描述">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <input type="file" id="exampleInputFile">
-                        <p class="help-block">Example block-level help text here.</p>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Check me out
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-success">创建</button>
                 </form>
             </div>
 

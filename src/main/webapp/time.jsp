@@ -1,11 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/4/8 0008
-  Time: 15:32
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,15 +57,12 @@
 
 <body>
 <div class="container nav_container">
-
     <div class="col-md-12 column" >
-        <div class="nav_text"><h3 style="color: red;">欢迎来到</h3>
+        <div class="nav_text">
+            <h3 style="color: red;">欢迎来到</h3>
             <h2 style="color: black">你创造的世界</h2>
-
         </div>
     </div>
-
-
     <div class="col-md-12 column">
         <div class="headImg" onclick="selectImg()">
             <input type="file" id="upload_file" style="display: none;" accept="image/jpeg, image/gif" />
@@ -75,91 +72,56 @@
             <p>暂无简介</p>
         </div>
     </div>
-
 </div>
-<div class="container head_nav">
-
-    <div class="col-md-12 column" >
-        <!--发布-->
-        <div class="fabu" style="width: 100%; background: rgb(229,236,242);">
-            <form action="">
-                <div class="input" style="background: white;">
-                    <input type="text" id="content" name="content" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+            <h1>保存的时空</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
+                        <div class="caption">
+                            我的大学
+                            <text id="delete"  style="float: right;">删除</text>
+                            <a id="updateAlbum" style="float: right;">更新</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="face">
-                    <ul class="left">
-                        <li><label for="send_image"><img src="web_files/图片.png">图片</label> <input name="send_image" id="send_image" onchange="PreviewImage(this)" style="position:absolute;clip:rect(0 0 0 0);" type="file"></li>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
+                        <div class="caption">
+                            我的大学
+                            <text id="delete"  style="float: right;">删除</text>
+                            <a id="updateAlbum" style="float: right;">更新</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
+                        <div class="caption">
+                            我的大学
+                            <text id="delete"  style="float: right;">删除</text>
+                            <a id="updateAlbum" style="float: right;">更新</a>
+                        </div>
+                    </div>
+                </div>
 
-                        <li><img src="web_files/视频.png" /><a
-                                href="#">视频</a></li>
-                        <li><img src="web_files/话题.png" /><a
-                                href="#">话题</a></li>
-                        <li><img src="web_files/闪电.png" /><a
-                                href="#">头条文章</a></li>
-                        <li><img src="web_files/三个点.png" /></li>
-                    </ul>
-            </form>
-            <div class="tijiao right">
-                <a href=""> <input type="button" value="发布"
-                                   onclick="sendContext()" />
             </div>
         </div>
-
     </div>
-</div>
-<div class="center_nav" style="margin-top: 2%;">
-    <ul>
-        <li class="nav_active li_list">我的过往</li>
-        <li class="li_list">我的期许</li>
-    </ul>
+    <div class="row">
+        <div class="col-md-12">
 
-</div>
-
-
-
-<!--我的个人中心-->
-<div class="col-md-12 column" style="margin-top: 1%;">
-    <div class="media" style="border-bottom: 0.5px solid burlywood;">
-        <a href="#" class="pull-left"><img src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/64/64/default.jpg" class="media-object" alt='' /></a>
-        <p>标题 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray; font-size: 10px;">2019-03-31 05:32:45</span></p>
-        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p><button style="float: right; border: none;">分享</button>
-    </div>
-</div>
-
-<div class="col-md-12 column" style="margin-top: 1%;">
-    <div class="media">
-        <a href="#" class="pull-left"><img src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/64/64/default.jpg" class="media-object" alt='' /></a>
-        <p>标题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray; font-size: 10px;">2019-03-31 05:32:45</span></p>
-        <p>内容</p>
-    </div>
-</div>
-<div class="col-md-12 column" style="margin-top: 1%;">
-    <div class="media">
-        <a href="#" class="pull-left"><img src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/64/64/default.jpg" class="media-object" alt='' /></a>
-        <p>标题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray; font-size: 10px;">2019-03-31 05:32:45</span></p>
-        <p>内容</p>
-    </div>
-</div>
-<div class="col-md-12 column" style="margin-top: 1%;">
-    <div class="media">
-        <a href="#" class="pull-left"><img src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/64/64/default.jpg" class="media-object" alt='' /></a>
-        <p>标题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray; font-size: 10px;">2019-03-31 05:32:45</span></p>
-        <p>内容</p>
-    </div>
-</div>
-<div class="col-md-12 column" style="margin-top: 1%;">
-    <div class="media">
-        <a href="#" class="pull-left"><img src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/64/64/default.jpg" class="media-object" alt='' /></a>
-        <p>标题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray; font-size: 10px;">2019-03-31 05:32:45</span></p>
-        <p>内容</p>
+            <h1>发布的时空</h1>
+        </div>
     </div>
 </div>
 
 
 
-
-
-</div>
 </body>
 <script>
 

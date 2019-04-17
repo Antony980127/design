@@ -1,11 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/4/8 0008
-  Time: 15:25
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,13 +67,13 @@
 
 
             <div class="form-group">
-                <label for="exampleInputEmail1">用户名：</label><input type="text" value="123456" class="form-control" id="exampleInputEmail" />
+                <label for="username">用户名：</label><input type="text" value="123456" class="form-control" id="username" />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">密码：</label><input type="text" value="2222" class="form-control" id="exampleInputPassword" />
+                <label for="password">密码：</label><input type="text" value="2222" class="form-control" id="password" />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">座右铭：</label><input type="text" value="老骥伏枥，志在千里" class="form-control" id="exampleInputPassword2" />
+                <label for="desc">座右铭：</label><input type="text" value="老骥伏枥，志在千里" class="form-control" id="desc" />
             </div>
             <button style="margin-left: 40%; background: lightskyblue;" type="submit" class="btn btn-default">更新</button>
         </form>
@@ -88,13 +88,13 @@
     <div class="col-md-8" style="margin-top: 2%;">
         <form action="##" >
             <div class="form-group">
-                <label for="exampleInputEmail1">原密码：</label><input type="text" value="" class="form-control" id="exampleInputEmail1" />
+                <label for="repassword">原密码：</label><input type="text" value="" class="form-control" id="repassword" />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">新密码：</label><input type="text" value="" class="form-control" id="exampleInputPassword1" />
+                <label for="newPassword1">新密码：</label><input type="text" value="" class="form-control" id="newPassword1" />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">新密码：</label><input type="text" value="" class="form-control" id="exampleInputPassword3" />
+                <label for="newPassword2">新密码：</label><input type="text" value="" class="form-control" id="newpassword2" />
             </div>
             <button style="margin-left: 40%; background: lightskyblue;" type="submit" class="btn btn-default">修改</button>
         </form>
@@ -128,4 +128,3 @@
 </script>
 
 </html>
-
