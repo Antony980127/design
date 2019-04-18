@@ -7,16 +7,17 @@ package com.school.request;
  * @create: 2019-04-16 09:24
  **/
 public class UpdateUserPassRequest {
-    private String passowrd;
+    private String repassword;
     private String newPassword;
     private String newPassword1;
 
-    public String getPassowrd() {
-        return passowrd;
+
+    public String getRepassword() {
+        return repassword;
     }
 
-    public void setPassowrd(String passowrd) {
-        this.passowrd = passowrd;
+    public void setRepassword(String repassword) {
+        this.repassword = repassword;
     }
 
     public String getNewPassword() {
@@ -35,11 +36,10 @@ public class UpdateUserPassRequest {
         this.newPassword1 = newPassword1;
     }
 
-
     @Override
     public String toString() {
-        return "UpdateUserPass{" +
-                "passowrd='" + passowrd + '\'' +
+        return "UpdateUserPassRequest{" +
+                "repassword='" + repassword + '\'' +
                 ", newPassword='" + newPassword + '\'' +
                 ", newPassword1='" + newPassword1 + '\'' +
                 '}';

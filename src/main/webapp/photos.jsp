@@ -69,77 +69,108 @@
 <div class="container photos">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <!--相册列表-->
-            <div id="albumPanel" class="row">
-                <div class="col-md-3">
-                    <div class="thumbnail">
-                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
-                        <div class="caption">
-                            我的大学
-                            <text id="delete"  style="float: right;">删除</text>
-                            <a id="updateAlbum" style="float: right;">更新</a>
-                        </div>
-                    </div>
+
+            <!--遮罩窗-->
+            <div class="modal fade" id="modal-container-396321" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form action="">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">
+                                    相册名称：
+                                </h4>
+                                <input type="text" name="albumName" placeholder="请输入相册名称"/>
+                                <h4 class="modal-title" id="">
+                                    相册名称：
+                                </h4>
+                                <input type="text" name="albumdesc" placeholder="描述。。"/>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary">保存</button>
+                            </div>
+                    </form>
                 </div>
-                <div class="col-md-3">
-                    <div class="thumbnail">
-                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/city/default.jpg" />
-                        <div class="caption">
-                            我的大学
-                            <text id="delete"  style="float: right;">删除</text>
 
-                            <a id="updateAlbum" style="float: right;">更新</a>
+            </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="thumbnail">
-                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
-                        <div class="caption">
-                            我的大学
-                            <text id="delete"  style="float: right;">删除</text>
+        </div>
 
-                            <a id="updateAlbum" style="float: right;">更新</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="thumbnail">
-                        <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
-                        <div class="caption">
-                            我的大学
-                        </div>
+        <!--相册列表-->
+        <div id="albumPanel" class="row">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
+                    <div class="caption">
+                        我的大学
+                        <a id="modal-396321" href="#modal-container-396321"  data-toggle="modal">编辑</a>
                     </div>
                 </div>
             </div>
-            <!--新增相册-->
-            <div id="addAlbumPanel" class="row">
-                <!--表单-->
-                <form style="margin: 0 auto;width: 400px;">
-                    <div class="form-group">
-                        <label for="albumName">相册名称</label>
-                        <input type="text" class="form-control" id="albumName" placeholder="请输入相册名称">
-                    </div>
-                    <div class="form-group">
-                        <label for="albumDesc">相册描述</label>
-                        <input type="text" class="form-control" id="albumDesc" placeholder="请输入相册描述">
-                    </div>
-                    <button type="submit" class="btn btn-success">创建</button>
-                </form>
-            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/city/default.jpg" />
+                    <div class="caption">
+                        我的大学
+                        <text id="delete"  style="float: right;">删除</text>
 
-            <!--更新相册面板-->
-            <div id="updateAlbumPanel" class="row">
-                <div class="row">
-                    <a id="backToAlbum" href="">返回</a>
+                        <a id="updateAlbum" style="float: right;">更新</a>
+
+                    </div>
                 </div>
-                更新相册面板
             </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
+                    <div class="caption">
+                        我的大学
+                        <text id="delete"  style="float: right;">删除</text>
+
+                        <a id="updateAlbum" style="float: right;">更新</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
+                    <div class="caption">
+                        我的大学
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--新增相册-->
+        <div id="addAlbumPanel" class="row">
+            <!--表单-->
+            <form style="margin: 0 auto;width: 400px;">
+                <div class="form-group">
+                    <label for="albumName">相册名称</label>
+                    <input type="text" class="form-control" id="albumName" placeholder="请输入相册名称">
+                </div>
+                <div class="form-group">
+                    <label for="albumDesc">相册描述</label>
+                    <input type="text" class="form-control" id="albumDesc" placeholder="请输入相册描述">
+                </div>
+                <button type="submit" class="btn btn-success">创建</button>
+            </form>
+        </div>
+
+        <!--更新相册面板-->
+        <div id="updateAlbumPanel" class="row">
+            <div class="row">
+                <a id="backToAlbum" href="">返回</a>
+            </div>
+            更新相册面板
         </div>
     </div>
 </div>
+</div>
+
 
 </body>
 

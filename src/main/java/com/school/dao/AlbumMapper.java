@@ -1,15 +1,13 @@
-package com.school.service;
+package com.school.dao;
 
 import com.school.entity.Album;
-import com.school.entity.AlbumComm;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 /**
- * 相册服务层
+ * 相册（流沙岁月）数据层
  */
-public interface AlbumService {
+public interface AlbumMapper {
     //查找所有
     List<Album> list();
 

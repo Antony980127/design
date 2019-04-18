@@ -8,7 +8,7 @@ package com.school.entity;
  **/
 public class Photos {
     private long id;
-    //照片名称
+    //照片名称（地址）
     private String name;
     //相册id
     private long AlbumId;

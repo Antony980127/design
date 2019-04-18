@@ -14,7 +14,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/private.css" />
+    <link rel="stylesheet" href="css/person.css" />
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" ></script>
 </head>
 <style type="text/css">
     html,body{

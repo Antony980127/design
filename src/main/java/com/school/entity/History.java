@@ -7,8 +7,11 @@ package com.school.entity;
  * @create: 2019-04-16 11:00
  **/
 public class History {
+    //id
     private long id;
+    //标题
     private String name;
+    //内容
     private String desc;
 
     public long getId() {

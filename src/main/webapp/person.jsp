@@ -62,18 +62,18 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-8" style="margin-top: 2%;">
-        <form action="##" >
+        <form action="/user/updateUser" method="">
 
 
 
             <div class="form-group">
-                <label for="username">用户名：</label><input type="text" value="123456" class="form-control" id="username" />
+                <label for="username">用户名：</label><input type="text" value="123456" name="username" class="form-control" id="username" />
             </div>
             <div class="form-group">
-                <label for="password">密码：</label><input type="text" value="2222" class="form-control" id="password" />
+                <label for="password">密码：</label><input type="text" value="2222" name="password" class="form-control" id="password" />
             </div>
             <div class="form-group">
-                <label for="desc">座右铭：</label><input type="text" value="老骥伏枥，志在千里" class="form-control" id="desc" />
+                <label for="desc">座右铭：</label><input type="text" value="老骥伏枥，志在千里" name="instruction" class="form-control" id="desc" />
             </div>
             <button style="margin-left: 40%; background: lightskyblue;" type="submit" class="btn btn-default">更新</button>
         </form>
@@ -86,15 +86,18 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-8" style="margin-top: 2%;">
-        <form action="##" >
+        <form action="/user/reSetPass" method="POST">
             <div class="form-group">
-                <label for="repassword">原密码：</label><input type="text" value="" class="form-control" id="repassword" />
+                <label for="repassword">原密码：</label>
+                <input type="text" value="" class="form-control" name="repassword" id="repassword" />
             </div>
             <div class="form-group">
-                <label for="newPassword1">新密码：</label><input type="text" value="" class="form-control" id="newPassword1" />
+                <label for="newPassword">新密码：</label>
+                <input type="text" value="" class="form-control" name="newPassword" id="newPassword" />
             </div>
             <div class="form-group">
-                <label for="newPassword2">新密码：</label><input type="text" value="" class="form-control" id="newpassword2" />
+                <label for="newPassword1">新密码：</label>
+                <input type="text" value="" class="form-control" name="newPassword1" id="newPassword1" />
             </div>
             <button style="margin-left: 40%; background: lightskyblue;" type="submit" class="btn btn-default">修改</button>
         </form>

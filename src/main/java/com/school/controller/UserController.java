@@ -1,5 +1,6 @@
 package com.school.controller;
 
+import com.school.entity.User;
 import com.school.request.LoginUserRequest;
 import com.school.request.RegisterUserRequest;
 import com.school.request.UpdateUserInfoRequest;
@@ -7,8 +8,11 @@ import com.school.request.UpdateUserPassRequest;
 import com.school.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 用户控制层
@@ -38,27 +42,30 @@ public class UserController {
      * 用户登录
      */
     @RequestMapping("/login")
-    private String login(@RequestBody LoginUserRequest loginUser){
-        System.out.println(loginUser.toString());
+    private String login( User user){
+        System.out.println(user.toString());
         return null;
     }
 
     /**
      * 修改密码
      */
-    @RequestMapping("/reSetPass")
-    private String reSetPass(@RequestBody UpdateUserPassRequest updateUserPass){
-        System.out.println(updateUserPass.toString());
-        return null;
+    @RequestMapping(value = "/reSetPass",method = RequestMethod.POST,produces = "application/json")
+    private String reSetPass(@Validated User user){
+
+        System.out.println(user.toString());
+
+        return "person";
     }
     /**
      * 更新信息
      */
-    @RequestMapping("/updateUser")
+    @RequestMapping(value = "/updateUser",method =RequestMethod.POST,produces = "application/json" )
     private String updateUser(@RequestBody UpdateUserInfoRequest updateUserInfo){
         System.out.println(updateUserInfo.toString());
         return null;
     }
+
 
 
 

@@ -11,18 +11,19 @@ public class TimecapsuleServiceImpl implements TimecapsuleService {
     @Autowired
     private TimecapsuleMapper timecapsuleMapper;
 
+
     @Override
     public int addNewTimecapsule(Timecapsule timecapsule) {
-        return timecapsuleMapper.addNewTimecapsule(timecapsule) ;
+        return timecapsuleMapper.addNewTimecapsule(timecapsule);
     }
 
     @Override
     public int deleteTimecapusle(String id) {
-        return timecapsuleMapper.deleteTimecapusle(id);
+        return timecapsuleMapper.deleteTimecapsule(id);
     }
 
     @Override
     public int updateTimecapusle(String id, int status) {
-        return timecapsuleMapper.updateTimecapusle(id,status);
+        return timecapsuleMapper.updateTimecapsule(id,status);
     }
 }

@@ -15,6 +15,16 @@ public class Album {
     private String desc;
     //相册用户
     private long userId;
+    //状态
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public long getId() {
         return id;
@@ -55,6 +65,7 @@ public class Album {
                 ", name='" + name + '\'' +
                 ", desc='" + desc + '\'' +
                 ", userId=" + userId +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

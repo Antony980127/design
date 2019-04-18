@@ -10,8 +10,8 @@ public interface TimecapsuleMapper {
     public int addNewTimecapsule(Timecapsule timecapsule);
 
     //删除
-    public int deleteTimecapusle(@Param("id")String id);
+    public int deleteTimecapsule(@Param("id")String id);
 
     //更新状态
-    public  int updateTimecapusle(@Param("id")String id,@Param("status")int status);
+    public  int updateTimecapsule(@Param("id")String id,@Param("status")int status);
 }

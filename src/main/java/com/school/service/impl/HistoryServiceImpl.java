@@ -1,7 +1,12 @@
 package com.school.service.impl;
 
+import com.school.dao.HistoryMapper;
+import com.school.entity.History;
 import com.school.service.HistoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @program: design
@@ -11,4 +16,11 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class HistoryServiceImpl implements HistoryService {
+   @Autowired
+   private HistoryMapper historyMapper;
+
+    @Override
+    public List<History> list() {
+        return historyMapper.list();
+    }
 }
