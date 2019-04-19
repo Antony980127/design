@@ -41,7 +41,6 @@
             <p>暂无简介</p>
         </div>
     </div>
-
 </div>
 <!--导航栏-->
 <div class="container nav_list">
@@ -49,36 +48,27 @@
         <ul>
             <li onclick="showDetail()" class="avtive_list li_list"><h4>账号信息</h4></li>
             <li onclick="updatePwd()" class="li_list"><h4>修改密码</h4></li>
-
-
         </ul>
-
     </div>
-
 </div>
-
 <!--个人信息详情-->
 <div class="container" id="detail" >
     <div class="col-md-3">
     </div>
     <div class="col-md-8" style="margin-top: 2%;">
-        <form action="/user/updateUser" method="">
-
-
-
+        <form action="updateUser" method="POST">
             <div class="form-group">
-                <label for="username">用户名：</label><input type="text" value="123456" name="username" class="form-control" id="username" />
+                <label for="username">用户名：</label><input type="text" value="${user.username}" name="username" class="form-control" id="username" readonly/>
             </div>
+            <%--<div class="form-group">--%>
+                <%--<label for="password">密码：</label><input type="text" value="2222" name="password" class="form-control" id="password" />--%>
+            <%--</div>--%>
             <div class="form-group">
-                <label for="password">密码：</label><input type="text" value="2222" name="password" class="form-control" id="password" />
-            </div>
-            <div class="form-group">
-                <label for="desc">座右铭：</label><input type="text" value="老骥伏枥，志在千里" name="instruction" class="form-control" id="desc" />
+                <label for="desc">座右铭：</label><input type="text" value="${user.instruction}" name="instruction" class="form-control" id="desc" />
             </div>
             <button style="margin-left: 40%; background: lightskyblue;" type="submit" class="btn btn-default">更新</button>
         </form>
     </div>
-
 </div>
 
 <!--个人信息详情-->
@@ -86,7 +76,7 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-8" style="margin-top: 2%;">
-        <form action="/user/reSetPass" method="POST">
+        <form action="reSetPass" method="POST">
             <div class="form-group">
                 <label for="repassword">原密码：</label>
                 <input type="text" value="" class="form-control" name="repassword" id="repassword" />
@@ -102,7 +92,6 @@
             <button style="margin-left: 40%; background: lightskyblue;" type="submit" class="btn btn-default">修改</button>
         </form>
     </div>
-
 </div>
 
 

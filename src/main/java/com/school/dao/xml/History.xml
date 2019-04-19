@@ -4,6 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.school.dao.HistoryMapper">
+    <resultMap id="historyBean" type="History">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="desc" property="desc"/>
 
+    </resultMap>
+    
+    <select id="list" resultMap="historyBean">
+      select * from tb_history
+
+    </select>
+    
 </mapper>
 

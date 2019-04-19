@@ -4,6 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.school.dao.PhotosMapper">
+    <resultMap id="photosBean" type="Photos">
+        <id column="id"
+    </resultMap>
 
 </mapper>
 

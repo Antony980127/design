@@ -1,6 +1,7 @@
 package com.school.service;
 
 import com.school.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,8 +13,9 @@ public interface UserService {
     //更新用户资料
     public int updateUser(User user);
 
-    //删除用户
-    public User findUserByUserName(String userName);
+    //通过用户名查找用户
+    public User findUserByUserName(String username);
+
 
     //查找所有的用户
     public List<User> findAllUser();

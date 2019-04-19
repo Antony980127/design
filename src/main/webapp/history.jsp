@@ -38,7 +38,7 @@
                     <a href="community.jsp">时光胶囊社区</a>
                 </li>
                 <li class="active">
-                    <a href="history.jsp">历史长河</a>
+                    <a href="listHistory">历史长河</a>
                 </li>
                 <li>
                     <a href="#">热门推荐</a>

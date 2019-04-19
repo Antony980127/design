@@ -93,6 +93,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary">保存</button>
                             </div>
+                        </div>
                     </form>
                 </div>
 
@@ -104,7 +105,7 @@
         <div id="albumPanel" class="row">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/people/default.jpg" />
+                    <img alt="300x200" src="http://img.ivsky.com/img/tupian/li/201810/09/xiaoxi_liushui-013.jpg" />
                     <div class="caption">
                         我的大学
                         <a id="modal-396321" href="#modal-container-396321"  data-toggle="modal">编辑</a>
@@ -113,7 +114,7 @@
             </div>
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/city/default.jpg" />
+                    <img alt="300x200" src="//img.ivsky.com/img/tupian/li/201810/08/haitan-002.jpg" />
                     <div class="caption">
                         我的大学
                         <text id="delete"  style="float: right;">删除</text>
@@ -125,7 +126,7 @@
             </div>
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
+                    <img alt="300x200" src="//img.ivsky.com/img/tupian/li/201810/06/xueshan-003.jpg" />
                     <div class="caption">
                         我的大学
                         <text id="delete"  style="float: right;">删除</text>
@@ -137,7 +138,7 @@
             </div>
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img alt="300x200" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/600/200/sports/default.jpg" />
+                    <img alt="300x200" src="//img.ivsky.com/img/tupian/li/201810/04/xueshan-002.jpg" />
                     <div class="caption">
                         我的大学
                     </div>

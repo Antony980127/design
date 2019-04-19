@@ -47,7 +47,7 @@
                     <a href="community.jsp">时光胶囊社区</a>
                 </li>
                 <li>
-                    <a href="history.jsp">历史长河</a>
+                    <a href="listHistory">历史长河</a>
                 </li>
                 <li>
                     <a href="#">热门推荐</a>
@@ -56,7 +56,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#">登录/注册</a>
+                    <a href="login.jsp">登录/注册</a>
                 </li>
 
             </ul>
@@ -94,6 +94,12 @@
         $(this).siblings().removeClass("nav_active");
 
     })
+
+
+
+
+
+
 
     function change3() {
         document.getElementById("iFrame").src = "time.jsp";

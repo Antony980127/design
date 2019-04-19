@@ -12,13 +12,13 @@ public interface UserMapper {
     //更新用户资料
     public int updateUser(User user);
 
-    //删除用户
-    public User findUserByUserName(@Param("userName")String userName);
+    //查找用户
+    public User findUserByUserName(@Param("username")String username);
 
     //查找所有的用户
     public List<User> findAllUser();
 
     //删除用户
-    public int deleteUser(@Param("userName")String userName);
+    public int deleteUser(@Param("username")String username);
 
 }
